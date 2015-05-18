@@ -10,7 +10,7 @@ $pageData->content = include_once "views/form.php";
 
 $submitIsClicked = isset($_GET['page']);
 if ( $submitIsClicked ) {
-    $pageData->content .= include_once "increment.php";
+    $pageData->content .= include_once "views/increment.php";
 }
 $page = include_once "templates/page.php";
 echo $page;

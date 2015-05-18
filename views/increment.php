@@ -17,17 +17,19 @@ if ($input) {
         fwrite($pipes[0], $input);
         fclose($pipes[0]);
 
-        $output = fgets($pipes[1]);
-    fclose($pipes[1]);
+        while ($output = fgets($pipes[1]))
+         {$outputResult = $output;}
+        fclose($pipes[1]);
     }
     $return_value = proc_close($process);
 
 } else {
-    $output = 0;}
+    $outputResult = 0;
+}
 
-$result = "<p> Answer $output</p>";
+$result = "<p> Answer $outputResult</p>";
 
 
-echo "increment.mac.php was called with output = <?$output>";
+echo "increment.mac.php was called with output = $output";
 return $result;
 

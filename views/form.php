@@ -18,6 +18,6 @@ return "
                 <input type='text' name='intText' class='form-control' id='usr'>
             </div>
             <button type='submit' name='BtnSubmit' class='btn btn-primary'>Submit</button>
-            Will increment.mac it by one
+            Will increment it by one
         </form>
     </div>";
